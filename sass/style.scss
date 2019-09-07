@@ -1,0 +1,357 @@
+@font-face {
+  font-family: "FredokaOne-Regular";
+  src: url(../fonts/FredokaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+
+
+$Brown: #424242;
+$lightBrown: #595959;
+$white: #ffffff;
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background: $white 0 0 no-repeat padding-box;
+  box-shadow: 0 3px 6px #0000001A;
+  position: relative;
+  z-index: 10;
+  .preheader{
+    top: 0;
+    left: 402px;
+    width: 458px;
+    height: 24px;
+    background: #E28527 0 0 no-repeat padding-box;
+    border-radius: 0 0 4px 4px;
+    color: $white;
+    font-family: Roboto-Regular;
+    a{
+      color: $white;
+      padding-left: 5px;
+    }
+  }
+  .toggle{
+    background: transparent url(../img/bars-solid.svg) 0 0 no-repeat padding-box;
+    top: 22px;
+    left: 14px;
+    width: 28px;
+    height: 25px;
+    position: absolute;
+  }
+  .nav li {
+    margin: 0 10px;
+    letter-spacing: 0;
+    font-family:  Roboto-Regular;
+    a{
+      text-decoration: none;
+      color: #000000;
+    }
+  }
+  .header__button{
+    background: transparent linear-gradient(269deg, #E28527 0%, #D55223 100%) 0% 0% no-repeat padding-box;
+    width: 191px;
+    height: 32px;
+    box-shadow: 0px 3px 6px #D552234D;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.56px;
+    color: $white;
+    font-size: 14px;
+    font-family: Roboto-Medium;
+    cursor: pointer;
+  }
+};
+.mob-nav{
+  position: relative;
+  z-index: 4;
+  a{
+    text-decoration: none;
+    color: #000000;
+  }
+}
+
+//Main
+
+main{
+  .background{
+    background: url(../img/background-1920.png) no-repeat center;
+    width: 100%;
+    height: 602px;
+    background-size: cover;
+    position: absolute;
+  }
+  .leafs{
+    .leaf__red{
+      top: -19.8114013671875px;
+      left: 30%;
+      width: 172px;
+      height: 181px;
+      transform: matrix(0.56, 0.83, -0.83, 0.56, 0, 0);
+      background: transparent url('../img/leaf-05.png') 0% 0% no-repeat padding-box;
+      opacity: 1;
+      filter: blur(2px);
+      position: absolute;
+    }
+    .leaf__orange{
+      top: 128px;
+      left: 80%;
+      width: 200px;
+      height: 200px;
+      background: transparent url('../img/leaf-01.png') 0% 0% no-repeat padding-box;
+      position: absolute;
+    }
+    .leaf__yellow{
+      top: 459px;
+      left: 20vw;
+      width: 313px;
+      height: 314px;
+      transform: matrix(-0.44, -0.9, 0.9, -0.44, 0, 0);
+      background: transparent url('../img/leaf-04.png') 0% 0% no-repeat padding-box;
+      opacity: 1;
+      position: absolute;
+
+    }
+  }
+  .main{
+    margin: 70px 0 0 40px;
+    .main__text{
+      font-size: 26px;
+      font-family: "Roboto-Light";
+      letter-spacing: 1.04px;
+      color: $white;
+      text-transform: uppercase;
+    }
+    .main__title{
+      letter-spacing: 1.44px;
+      color: $white;
+      text-shadow: 0px 3px 6px #A55E0080;
+      opacity: 1;
+      font-size: 36px;
+      font-family: FredokaOne-Regular;
+      text-transform: uppercase;
+    }
+    .main__description{
+      font-size: 16px;
+      letter-spacing: 0.64px;
+      color: #FFFFFF;
+      opacity: 1;
+      font-family: Roboto-Light;
+    }
+    .main__button-one {
+      width: 191px;
+      height: 40px;
+      background: transparent linear-gradient(180deg, $white 0%, #FFECD9 100%) 0% 0% no-repeat padding-box;
+      box-shadow: 0 3px 6px #A55E00BF;
+      border-radius: 4px;
+      letter-spacing: 0.56px;
+      color: #D55223;
+      text-transform: uppercase;
+      font-family: Roboto-Medium;
+      text-align: center;
+      cursor: pointer;
+    }
+    .main__button-two{
+      width: 191px;
+      height: 40px;
+      box-shadow: 0 3px 6px #A55E00BF;
+      border: 2px solid $white;
+      border-radius: 4px;
+      opacity: 1;
+      letter-spacing: 0.56px;
+      color: $white;
+      text-shadow: 0 3px 6px #A55E00BF;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: Roboto-Medium;
+      &:hover{
+        background: transparent linear-gradient(180deg, $white 0%, #FFECD9 100%) 0 0;
+        color: #D55223;
+        transition: 0.3s;
+      }
+    }
+    .main__barel{
+      background: transparent url(../img/barel-golden-02.png) 0 0 no-repeat padding-box;
+      width: 282px;
+      height: 452px;
+      opacity: 1;
+      animation: rotating 1s ease-in-out;
+    }
+  }
+}
+
+
+
+.main__title-two{
+  padding-top: 150px;
+  font-size: 48px;
+  text-align: center;
+  font-family: FredokaOne-Regular;
+  letter-spacing: 1.44px;
+  color: #D55223;
+  opacity: 1;
+}
+.text-animation{
+  animation: text-animation 1.7s  ease-in-out;
+}
+.tech-task__background-yellow{
+  background: transparent linear-gradient(180deg, #F3CA22 0%, #D87A00 100%) 0 0 no-repeat padding-box;
+  animation: barel__animation 1.4s  ease-in-out;
+}
+.tech-task__background-orange{
+  background: transparent linear-gradient(180deg, #E75300 0%, #531E00 100%) 0 0 no-repeat padding-box;
+  animation: barel__animation 1.8s  ease-in-out;
+
+}
+.tech-task__background-red{
+  background: transparent linear-gradient(180deg, #CC0000 0%, #390000 100%) 0 0 no-repeat padding-box;
+  animation: barel__animation 2.2s  ease-in-out;
+}
+.tech-task__background-brown{
+  background: transparent linear-gradient(180deg, #7A0200 0%, #000000 100%) 0 0 no-repeat padding-box;
+  animation: barel__animation 2.6s  ease-in-out;
+
+}
+.barel-yellow{
+  background: transparent url('../img/barel-golden.png') 0 0 no-repeat padding-box;
+}
+.barel-orange{
+  background: transparent url('../img/barel-orange.png') 0 0 no-repeat padding-box;
+}
+.barel-red{
+  background: transparent url('../img/barel-red.png') 0 0 no-repeat padding-box;
+}
+.barel-brown{
+  background: transparent url('../img/barel-brown.png') 0 0 no-repeat padding-box;
+}
+.tech-task{
+  margin-top: 40px;
+  top: 859px;
+  left: 70px;
+  width: 263px;
+  height: 331px;
+  box-shadow: 0 6px 9px #A55E0040;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .tech-task__title{
+    font-size: 20px;
+    text-align: center;
+    font-family: FredokaOne-Regular;
+    letter-spacing: 0.8px;
+    color: $white;
+    opacity: 1;
+    text-transform: uppercase;
+  }
+  .tech-task__img{
+    width: 283px;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 75px;
+    transition: 0.4s ease-in-out;
+
+   &:hover{
+     transform: translateY(-25px);
+
+   }
+  }
+  .tech-task__offer{
+    text-align: center;
+    font-family: FredokaOne-Regular;
+    letter-spacing: 0.56px;
+    color: #FFFFFF;
+  }
+  .tech-task__button{
+    width: 191px;
+    height: 40px;
+    background: transparent linear-gradient(180deg, $white 0%, #FFECD9 100%) 0 0 no-repeat padding-box;
+    box-shadow: 0 6px 9px #A55E00BF;
+    border-radius: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #D55223;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Roboto-Medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 191px;
+    position: relative;
+    z-index: 2;
+  }
+  .tech-task__money{
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.48px;
+    color: $white;
+    position: relative;
+    z-index: 2;
+  }
+
+}
+
+
+//Animation
+
+@keyframes rotating {
+  0%   { transform: rotate(180deg); opacity: 0.1; }
+  100% { transform: rotate(0deg); opacity: 1; }
+}
+@keyframes barel__animation {
+  0%   { transform: translate(0, 340px);  opacity: 0.1;}
+  50%   { transform: translate(0, 0);  opacity: 0.9;}
+  100% { transform: translate(0, 0); opacity: 1;}
+}
+@keyframes text-animation {
+  0%   { transform: translate(0, 340px);  opacity: 0.1;}
+  50%   { transform: translate(0, 0);  opacity: 0.9;}
+  100% { transform: translate(0, 0); opacity: 1;}
+}
+
+
+@media (max-width: 992px){
+
+  .toggle{
+    display: block;
+  }
+  .nav{
+    visibility: hidden;
+  }
+
+}
+@media (min-width: 992px){
+  .toggle{
+    display: none;
+  }
+  .mob-nav{
+    display: none;
+  }
+}
+
